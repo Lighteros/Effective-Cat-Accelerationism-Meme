@@ -120,6 +120,22 @@
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
+  const ca = document.querySelector(".ca");
+  if (ca) {
+    const label = ca.querySelector("em");
+    ca.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(ca.dataset.ca);
+        label.textContent = "Copied";
+      } catch (err) {
+        label.textContent = "Select";
+      }
+      window.setTimeout(() => {
+        label.textContent = "Copy";
+      }, 1600);
+    });
+  }
+
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");

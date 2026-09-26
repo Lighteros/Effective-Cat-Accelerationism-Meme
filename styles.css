@@ -231,7 +231,46 @@ h1 .thin {
   color: var(--muted);
   font-size: 1.08rem;
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.4rem 0 1.2rem; }
+.ca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(100%, 38rem);
+  margin-top: 1.15rem;
+  padding: 0.55rem 0.7rem 0.55rem 0.85rem;
+  border: 1px solid var(--line);
+  background: rgba(6, 10, 22, 0.72);
+  color: var(--ink);
+  font-family: var(--font-mark);
+  text-align: left;
+  cursor: pointer;
+}
+.ca span {
+  color: var(--cyan);
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+}
+.ca code {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-mark);
+  font-size: 0.82rem;
+  color: #d7f6ff;
+}
+.ca em {
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #041018;
+  background: var(--cyan);
+  padding: 0.45rem 0.7rem;
+}
+.ca:hover { border-color: var(--cyan); box-shadow: 0 0 18px rgba(92, 243, 255, 0.2); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.1rem 0 1.2rem; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -490,6 +529,12 @@ h2 {
   color: var(--muted);
   letter-spacing: 0.08em;
   font-size: 0.82rem;
+}
+.bezel-bar span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .bezel iframe {
   display: block;
